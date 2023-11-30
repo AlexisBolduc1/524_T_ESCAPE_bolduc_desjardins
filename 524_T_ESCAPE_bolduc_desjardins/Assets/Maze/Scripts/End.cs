@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class End : MonoBehaviour {
 
@@ -13,13 +14,15 @@ public class End : MonoBehaviour {
 
 		if (col.gameObject.tag == "Player") {
 
-			winPanel.SetActive(true);
-
 			audioSource.clip = winClip;
 			audioSource.Play();
-
+			
 			endState = true;
 			Destroy(col.gameObject, 5);
+
+			SceneManager.LoadScene(1);
+
+			
 		}
 	}
 

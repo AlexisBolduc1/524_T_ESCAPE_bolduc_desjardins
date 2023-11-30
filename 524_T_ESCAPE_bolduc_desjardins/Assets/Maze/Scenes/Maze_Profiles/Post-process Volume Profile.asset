@@ -53,7 +53,7 @@ MonoBehaviour:
     defaultState: 1
   tonemapper:
     overrideState: 1
-    value: 2
+    value: 3
   toneCurveToeStrength:
     overrideState: 0
     value: 0
@@ -83,14 +83,14 @@ MonoBehaviour:
     overrideState: 1
     value: 40
   tint:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 22
   colorFilter:
     overrideState: 1
-    value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    value: {r: 0.9150943, g: 0, b: 0, a: 1}
   hueShift:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 48
   saturation:
     overrideState: 0
     value: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
     value: 0
   postExposure:
     overrideState: 1
-    value: 2
+    value: 10
   contrast:
     overrideState: 0
     value: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 0.9297804, y: 1, z: 0.98479205, w: 0}
+    value: {x: 0.564724, y: 0.6348152, z: 1, w: 0}
   gamma:
     overrideState: 1
     value: {x: 1, y: 0.9279869, z: 0.8262357, w: 0}
