@@ -14,13 +14,15 @@ public class End : MonoBehaviour {
 
 		if (col.gameObject.tag == "Player") {
 
-			SceneManager.LoadScene(1);
-
 			audioSource.clip = winClip;
 			audioSource.Play();
-
+			
 			endState = true;
 			Destroy(col.gameObject, 5);
+
+			SceneManager.LoadScene(1);
+
+			
 		}
 	}
 

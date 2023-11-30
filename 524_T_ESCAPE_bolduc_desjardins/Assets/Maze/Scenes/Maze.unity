@@ -1104,6 +1104,100 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861914162}
   m_CullTransparentMesh: 0
+--- !u!1 &914406445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 914406449}
+  - component: {fileID: 914406448}
+  - component: {fileID: 914406447}
+  - component: {fileID: 914406446}
+  m_Layer: 0
+  m_Name: OSC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &914406446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914406445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9194126c91207840b360fb654791387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscReceiver: {fileID: 914406447}
+  oscTransmitter: {fileID: 914406448}
+  player: {fileID: 1559066048}
+  ascentSpeed: 100
+  descentSpeed: 100
+--- !u!114 &914406447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914406445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbba286dc10e549b2bdec947ef8dbd3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _autoConnect: 1
+  _closeOnPause: 0
+  _mapBundle: {fileID: 0}
+  _workInEditor: 0
+  _localHostMode: 0
+  _localHost: 192.168.157.40
+  _localPort: 7001
+--- !u!114 &914406448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914406445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 464088183d2a1484ab8fb64e356c9f5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _autoConnect: 1
+  _closeOnPause: 0
+  _mapBundle: {fileID: 0}
+  _workInEditor: 0
+  _localHostMode: 0
+  _localPortMode: 2
+  _localReceiver: {fileID: 0}
+  _localHost: 192.168.157.40
+  _localPort: 7000
+  _remoteHost: 127.0.0.1
+  _remotePort: 7000
+  _useBundle: 0
+--- !u!4 &914406449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914406445}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.6415882, y: 2.1079547, z: -0.050973244}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1064691457
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,6 +1878,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539332309}
   m_CullTransparentMesh: 0
+--- !u!1 &1559066048 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2542583498671684451, guid: 957f8916213cb0d439f411771dac11e8, type: 3}
+  m_PrefabInstance: {fileID: 2542583499483486256}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1683910396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2283,11 +2382,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2542583498671684456, guid: 957f8916213cb0d439f411771dac11e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.35
+      value: 2.21
       objectReference: {fileID: 0}
     - target: {fileID: 2542583498671684456, guid: 957f8916213cb0d439f411771dac11e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.73
+      value: 3.72
       objectReference: {fileID: 0}
     - target: {fileID: 2542583498671684456, guid: 957f8916213cb0d439f411771dac11e8, type: 3}
       propertyPath: m_LocalPosition.z
