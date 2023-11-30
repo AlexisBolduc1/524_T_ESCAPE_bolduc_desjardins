@@ -14,6 +14,9 @@ public class oscscript : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     public float bulletForce = 20f;
+    public int count;
+    public GameObject winText;
+
 
     Vector2 movement;
     Vector2 mousePosition;
@@ -54,5 +57,25 @@ public class oscscript : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
         rbBullet.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        Debug.Log("shot fired");
     }
+
+void OnCollisionEnter2D(Collision2D collision)
+{
+    Debug.Log("Collision detected");
+    if (collision.gameObject.CompareTag("enemy"))
+    {
+        count++;
+        Debug.Log("Hit! Count: " + count);
+
+        if (count == 3)
+        {
+            winText.SetActive(true);
+        }
+    }
+    else
+    {
+        Debug.Log("Collision with non-'cible' object: " + collision.gameObject.name);
+    }
+}
 }
