@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Accident : MonoBehaviour {
 
@@ -10,7 +11,8 @@ public class Accident : MonoBehaviour {
 	public AudioSource audioSource;
 	public AudioClip loseClip;
 
-	public static int health = 3;
+	public static int health = 1;
+	
 	
 	void OnCollisionEnter2D (Collision2D col){
 
@@ -41,6 +43,7 @@ public class Accident : MonoBehaviour {
 		losePanel.SetActive(true);
 		audioSource.clip = loseClip;
 		audioSource.Play();
-		Destroy(gameObject, 5);
+
+		SceneManager.LoadScene(0);
 	}
 }

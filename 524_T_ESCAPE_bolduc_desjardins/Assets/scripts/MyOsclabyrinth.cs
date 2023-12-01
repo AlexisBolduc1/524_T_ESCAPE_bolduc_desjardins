@@ -7,8 +7,6 @@ public class MyOsclabyrinth : MonoBehaviour {
 public extOSC.OSCTransmitter oscTransmitter;
 public GameObject player;
 float myChronoStart;
-public float ascentSpeed = 100.0f;
-public float descentSpeed = 100.0f;
 
 public static float ScaleValue(float value, float inputMin, float inputMax, float outputMin, float outputMax)
 {
@@ -32,24 +30,16 @@ void updownjoueur(extOSC.OSCMessage oscMessage)
         return;
     }
 
-    if (valeur == 1)
-    {
-        Vector3 newPosition = player.transform.position + Vector3.up * ascentSpeed * Time.deltaTime;
-            player.transform.position = new Vector3(player.transform.position.x, newPosition.y, player.transform.position.z);
-    }
-    else if (valeur == 0)
-    {
-
-        Vector3 newPosition = player.transform.position + Vector3.down * descentSpeed * Time.deltaTime;
-        player.transform.position = new Vector3(player.transform.position.x, newPosition.y, player.transform.position.z);
-    }
+    float hautbas = ScaleValue(valeur, 0, 4095, -2, 5);
+    // Appliquer la rotation au GameObject ciblé :
+    player.transform.eulerAngles = new Vector3(0,hautbas,0);
 
 }
 
 void Start()
 {
 
-    oscReceiver.Bind("/angle", updownjoueur);
+    oscReceiver.Bind("/tof", updownjoueur);
 
 
 

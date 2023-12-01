@@ -18,7 +18,6 @@ public class End : MonoBehaviour {
 			audioSource.Play();
 			
 			endState = true;
-			Destroy(col.gameObject, 5);
 
 			SceneManager.LoadScene(1);
 
