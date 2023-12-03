@@ -36,10 +36,36 @@ void updownjoueur(extOSC.OSCMessage oscMessage)
 
 }
 
+void dgjoueur(extOSC.OSCMessage oscMessage)
+{
+    float valeur;
+    if (oscMessage.Values[0].Type == extOSC.OSCValueType.Int)
+    {
+        valeur = oscMessage.Values[0].IntValue;
+    }
+    else if (oscMessage.Values[0].Type == extOSC.OSCValueType.Float)
+    {
+        valeur = oscMessage.Values[0].FloatValue;
+    }
+    else
+    {
+        return;
+    }
+if(valeur > 0){
+float dgjoueur = ScaleValue(valeur, 0, 4095, -12, 3);
+    // Appliquer la rotation au GameObject ciblé :
+    player.transform.position = new Vector3(dgjoueur,0,0);
+}else if(valeur == 0 ){
+   player.transform.position = new Vector3(2,2,0); 
+}
+
+}
+
 void Start()
 {
 
     oscReceiver.Bind("/tof", updownjoueur);
+    oscReceiver.Bind("/enc", dgjoueur);
 
 
 
