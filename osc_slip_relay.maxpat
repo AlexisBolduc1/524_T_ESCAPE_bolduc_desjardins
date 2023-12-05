@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 2,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 995.0, 326.0, 651.0, 549.0 ],
+		"rect" : [ 1955.0, 387.0, 1068.0, 713.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,61 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-6",
-					"maxclass" : "comment",
+					"id" : "obj-27",
+					"maxclass" : "number",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 193.5, 345.0, 393.0, 20.0 ],
-					"text" : "This forwards the OSC messages received by SLIP to UDP."
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 307.9444400370121, 474.814799249172211, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-25",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 222.1296266913414, 474.814799249172211, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 136.3148133456707, 474.814799249172211, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 50.5, 474.814799249172211, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 5,
+					"numoutlets" : 5,
+					"outlettype" : [ "", "", "", "", "" ],
+					"patching_rect" : [ 50.5, 374.815188949108119, 362.2592533826828, 22.0 ],
+					"text" : "route /button /photo /enc /encBut"
 				}
 
 			}
@@ -55,19 +104,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 50.5, 345.0, 135.0, 22.0 ],
+					"patching_rect" : [ 77.907406508922577, 338.333333551883698, 135.0, 22.0 ],
 					"text" : "udpsend localhost 7001"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 158.5, 116.0, 393.0, 20.0 ],
-					"text" : "This forwards the OSC messages received by UDP to SLIP."
 				}
 
 			}
@@ -80,36 +118,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 50.5, 116.0, 97.0, 22.0 ],
 					"text" : "udpreceive 7000"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 1,
-					"fontsize" : 16.0,
-					"id" : "obj-18",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 310.5, 213.0, 530.0, 42.0 ],
-					"text" : "Note: This patcher uses CNMAT's slipOSC and OpenSoundControl. Please install CNMAT from Max's Package Manager.",
-					"textcolor" : [ 0.996078431372549, 0.427450980392157, 0.0, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 1,
-					"fontsize" : 16.0,
-					"id" : "obj-5",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 312.5, 270.0, 179.0, 42.0 ],
-					"text" : "Don't forget to set the proper baud and port.",
-					"textcolor" : [ 0.792156862745098, 0.0, 0.0, 1.0 ]
 				}
 
 			}
@@ -134,7 +142,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 2,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -180,7 +188,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 5,
-											"revision" : 2,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -268,8 +276,8 @@
 													"id" : "obj-30",
 													"maxclass" : "newobj",
 													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"numoutlets" : 3,
+													"outlettype" : [ "", "", "OSCTimeTag" ],
 													"patching_rect" : [ 72.0, 221.0, 113.0, 22.0 ],
 													"style" : "default",
 													"text" : "OpenSoundControl"
@@ -280,9 +288,9 @@
 												"box" : 												{
 													"id" : "obj-29",
 													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 2,
-													"outlettype" : [ "", "" ],
+													"numinlets" : 2,
+													"numoutlets" : 3,
+													"outlettype" : [ "", "", "OSCTimeTag" ],
 													"patching_rect" : [ 77.0, 277.0, 125.0, 22.0 ],
 													"style" : "default",
 													"text" : "slipOSC"
@@ -398,7 +406,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 5,
-											"revision" : 2,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -437,8 +445,8 @@
 													"id" : "obj-10",
 													"maxclass" : "newobj",
 													"numinlets" : 1,
-													"numoutlets" : 2,
-													"outlettype" : [ "", "" ],
+													"numoutlets" : 3,
+													"outlettype" : [ "", "", "OSCTimeTag" ],
 													"patching_rect" : [ 50.0, 152.0, 113.0, 22.0 ],
 													"style" : "default",
 													"text" : "OpenSoundControl"
@@ -450,8 +458,8 @@
 													"id" : "obj-12",
 													"maxclass" : "newobj",
 													"numinlets" : 2,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"numoutlets" : 3,
+													"outlettype" : [ "", "", "OSCTimeTag" ],
 													"patching_rect" : [ 50.0, 100.0, 125.0, 22.0 ],
 													"style" : "default",
 													"text" : "slipOSC"
@@ -589,7 +597,6 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-67",
-									"ignoreclick" : 1,
 									"maxclass" : "live.text",
 									"numinlets" : 1,
 									"numoutlets" : 2,
@@ -1034,7 +1041,7 @@
 								"box" : 								{
 									"allowdrag" : 0,
 									"id" : "obj-19",
-									"items" : [ "(serial", "port)", ",", "BLTH", ",", "OpenRunProbyShokz", ",", "Bluetooth-Incoming-Port", ",", "OpenCommbyAfterShokz" ],
+									"items" : [ "(serial", "port)", ",", "COM3" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1603,7 +1610,44 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
+					"order" : 0,
 					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"order" : 1,
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"source" : [ "obj-7", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-25", 0 ],
+					"source" : [ "obj-7", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"source" : [ "obj-7", 3 ]
 				}
 
 			}
@@ -1620,7 +1664,15 @@
 			"inherited_shortname" : 1
 		}
 ,
-		"dependency_cache" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "OpenSoundControl.mxe64",
+				"type" : "mx64"
+			}
+, 			{
+				"name" : "slipOSC.mxe64",
+				"type" : "mx64"
+			}
+ ],
 		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "Audiomix",
