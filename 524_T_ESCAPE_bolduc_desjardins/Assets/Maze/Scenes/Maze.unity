@@ -754,6 +754,8 @@ MonoBehaviour:
   oscReceiver: {fileID: 914406447}
   oscTransmitter: {fileID: 914406448}
   player: {fileID: 1559066048}
+  rotationSpeed: 1000
+  moveSpeed: 5
 --- !u!114 &914406447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -972,6 +974,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2542583498671684457, guid: 957f8916213cb0d439f411771dac11e8, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2542583498671684458, guid: 957f8916213cb0d439f411771dac11e8, type: 3}
       propertyPath: loseClip
       value: 
@@ -1032,7 +1038,8 @@ PrefabInstance:
       propertyPath: m_ApplyActiveColorSpace
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2542583498671684452, guid: 957f8916213cb0d439f411771dac11e8, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2542583499776903625, guid: 957f8916213cb0d439f411771dac11e8, type: 3}
     m_AddedGameObjects: []
