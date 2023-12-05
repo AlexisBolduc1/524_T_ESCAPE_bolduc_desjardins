@@ -978,6 +978,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2542583498671684457, guid: 957f8916213cb0d439f411771dac11e8, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 2542583498671684458, guid: 957f8916213cb0d439f411771dac11e8, type: 3}
       propertyPath: loseClip
       value: 
