@@ -20,6 +20,7 @@ public static float ScaleValue(float value, float inputMin, float inputMax, floa
 
 void apparition(extOSC.OSCMessage oscMessage)
 {
+    Debug.Log(oscMessage.Values[0]);
     float valeur;
     if (oscMessage.Values[0].Type == extOSC.OSCValueType.Int)
     {
@@ -34,24 +35,24 @@ void apparition(extOSC.OSCMessage oscMessage)
         return;
     }
 
-    if (valeur <= 300)
+    if (valeur <= 1650)
         {
         textun.SetActive(true);
-        }else if(valeur > 300){
+        }else if(valeur > 1650){
             textun.SetActive(false);
         };
 
-        if (valeur <= 200)
+        if (valeur <= 1500)
         {
         textdeux.SetActive(true);
-        } else if(valeur > 200){
+        } else if(valeur > 1500){
             textdeux.SetActive(false);
         };
 
-        if (valeur <= 80)
+        if (valeur <= 900)
         {
         boutton.SetActive(true);
-        }else if(valeur > 80){
+        }else if(valeur > 900){
             boutton.SetActive(false);
         };
 
@@ -59,12 +60,7 @@ void apparition(extOSC.OSCMessage oscMessage)
 
 void Start()
 {
-
     oscReceiver.Bind("/photo", apparition);
-
-
-
-
 }
 
 void Update()

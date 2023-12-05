@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class TargetManager : MonoBehaviour
 {
    public int totalCount = 0;
+    public GameObject winText;
 
     public void IncrementCount()
     {
@@ -13,8 +15,8 @@ public class TargetManager : MonoBehaviour
 
         if (totalCount == 3)
         {
-            // You can add your win condition here
             Debug.Log("You win!");
+            winText.SetActive(true);
         }
     }
 }
