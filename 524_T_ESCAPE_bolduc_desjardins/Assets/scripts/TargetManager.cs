@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class TargetManager : MonoBehaviour
@@ -13,10 +14,12 @@ public class TargetManager : MonoBehaviour
         totalCount++;
         Debug.Log("Total Hit Count: " + totalCount);
 
-        if (totalCount == 3)
+        if (totalCount >= 3)
         {
             Debug.Log("You win!");
             winText.SetActive(true);
+            SceneManager.LoadScene(2);
+
         }
     }
 }
